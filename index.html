@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/09cd956466.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="container">
+        <nav class="navbar">
+            <div class="n-container">
+                <i class="fa-solid fa-house" onclick="eval(0)"></i>
+                <button onclick="eval(1)">Contacts</button>
+                <button onclick="eval(2)">About Me</button>
+                <button onclick="eval(3)">Aspirations</button>
+                <button onclick="eval(4)">Projects</button>
+                <button onclick="eval(5)">Achievements</button>
+            </div>
+        </nav>
+    </nav>
+    
+    <nav class="main">
+        <nav class="b-cot">
+            <h1>Chingutei Narmandakh</h1>
+        </nav>
+        <img src="assets/front.jpg" alt="Front">
+    </nav>
+    <nav class="second">
+        <nav class="contacts">
+            <div class="c-container">
+                <i class="fa-solid fa-address-card"></i>
+                <p>My email is chingutei.narmandakh@gmail.com. </p>
+            </div>
+        </nav>
+        <img src="assets/front.jpg" alt="Front">
+    </nav>
+    <nav class="third">
+        <img src="assets/front.jpg" alt="Front">
+        
+    </nav>
+    <nav class="fourth">
+        <img src="assets/front.jpg" alt="Front">
+    </nav>
+    <nav class="fifth">
+        <img src="assets/front.jpg" alt="Front">
+    </nav>
+    <nav class="sixth">
+        <img src="assets/front.jpg" alt="Front">
+    </nav>
+    <script>
+        var apos = document.body.scrollTop;
+        var body = document.body,
+            html = document.documentElement;
+            
+        var height = Math.max( body.scrollHeight, body.offsetHeight, 
+            html.clientHeight, html.scrollHeight, html.offsetHeight );
+        var click=0;
+        var ids = [];
+        var buttons = document.querySelectorAll('button')
+        var pageWidth = Math.floor(document.body.clientHeight)/6
+        console.log(buttons[0].onclick, document.body.clientHeight)
+        function scrollWin(target, time, c) {
+            var currentPosition = apos
+            var scrollInterval = target / time;
+            var intervalTime = 10;
+            var intervalFunction;
+            console.log("cp: "+currentPosition)
+            if(c == 0){
+                for(var d =0;d<ids.length;d++){
+                    window.clearInterval(d)
+                }
+            }
+            else{
+                
+                intervalFunction = setInterval(function() {
+                    currentPosition = currentPosition + scrollInterval * intervalTime;
+                    window.scrollTo(0, currentPosition);
+                    if (Math.round(currentPosition) == Math.round(apos+target)) {
+                        window.clearInterval(intervalFunction);
+                        console.log("current pos: " + currentPosition, "pos-target: " + (apos+target), "pageHeight: "+ pageWidth)
+                        apos = Math.round(currentPosition)
+                    }
+                }, 1)
+            }
+            
+        }
+        
+        function eval(pos){
+            
+            let posx = pageWidth*pos;
+            let diff = posx-apos
+            pageWidth = Math.floor(document.body.clientHeight)/6
+            click = click^true
+
+            console.log('pos: '+apos,'moving up//down: '+ diff, 'valid click: '+ click)
+            ids.push(setTimeout(function(){scrollWin(diff, 2000, click)}, 500))
+            setTimeout(function(){
+                click=false
+            }, 600)
+        }
+    </script>
+</body>
+</html>
