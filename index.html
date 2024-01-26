@@ -8,83 +8,110 @@
     <script src="https://kit.fontawesome.com/09cd956466.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="container">
-        <nav class="navbar">
+    <section class="container">
+        <section class="navbar">
             <div class="n-container">
                 <i class="fa-solid fa-house" onclick="eval(0)"></i>
                 <button onclick="eval(1)">Contacts</button>
                 <button onclick="eval(2)">About Me</button>
-                <button onclick="eval(3)">Aspirations</button>
-                <button onclick="eval(4)">Projects</button>
-                <button onclick="eval(5)">Achievements</button>
+                <button onclick="eval(3)">Projects</button>
+                <button onclick="eval(4)">Resume</button>
             </div>
-        </nav>
-    </nav>
+        </section>
+    </section>
     
-    <nav class="main">
-        <nav class="b-cot">
+    <section class="main">
+        <img src="assets/background.jpg" alt="" class="back">
+        
+        <section class="b-cot">
+            <section>
+                <img src="assets/front.png" alt="Front" class="front">
+            </section>
             <h1>Chingutei Narmandakh</h1>
-        </nav>
-        <img src="assets/painting-mountain-lake-with-mountain-background.jpg" alt="Front">
-    </nav>
-    <nav class="second">
-        <nav class="contacts">
+            <div class="contact-links">
+                <a href="https://www.instagram.com/chingu444_/"> <img src="assets/ILogo.png" alt=""></a>
+                <a href="https://www.tiktok.com/@jiji_012345"> <img src="assets/t-icon.png" alt=""></a>
+            </div>
+        </section>
+        
+    </section>
+    <section class="second">
+        <img src="assets/second.jpg" alt="">
+        <section class="contacts">
             <div class="c-container">
                 <i class="fa-solid fa-address-card"></i>
-                <p>My email is chingutei.narmandakh@gmail.com. <br> My phone number is 925-694-2636</p>
+                <p>Email: chingutei.narmandakh@gmail.com <br> Phone: 925-694-2636 <br> Location: Pleasanton</p>
             </div>
-        </nav>
+        </section>
         <img src="assets/painting-mountain-lake-with-mountain-background.jpg" alt="Front">
-    </nav>
-    <nav class="third">
-        <img src="assets/painting-mountain-lake-with-mountain-background.jpg" alt="Front">
-        <nav class="a-container">
+    </section>
+    <section class="third">
+        <section class="section-1">
             <h3>
                 About Me
             </h3>
             <div>
-                Currently, I'm a freshmen at Foothill High School. I'm hoping to get a job in the STEM field. <br> 
-                The way I'm accomplishing this goal is enhance and experience my decision-making and problem-solving skills. 
+                Currently, I'm a freshmen at Foothill High School. I'm hoping to get a job in the STEM field.
+                The way I'm accomplishing this goal is to enhance and age my decision-making and problem-solving skills.
+                I'm interested in Computer Science, and I am planning on taking AP Computer Science next year to learn more about it. To be more exact, I plan on becoming a software engineer, and develop intriguing projects in the future. I spend my non-working time in tkaing care of myself such as going out for walks, playing sports with friends, and even joining marathons. 
             </div>
-        </nav>
-    </nav>
-    <nav class="fourth">
-        <img src="assets/painting-mountain-lake-with-mountain-background.jpg" alt="Front">
-    </nav>
-    <nav class="fifth">
-        <img src="assets/painting-mountain-lake-with-mountain-background.jpg" alt="Front">
-        <nav class="p-container">
+        </section>
+        <hr class="second-break">
+        <section class="section-2">
+            <h1>My Traits</h1>
+            <span class="hardworking">
+                <div>Hardworking</div>
+            </span>
+            <span class="creative">
+                <div>Creative</div>
+            </span>
+            <span class="cooperative">
+                <div>Cooperative</div>
+            </span>
+            <span class="disciplined">
+                <div>Disciplined</div>
+            </span>
+        </section>
+        
+        </section>
+    </section>
+    <section class="fourth">
+        <section class="p-container">
             <div>
-                <div>
-                    <img src="" alt="1">
-                    <p>Project 1</p>
-                </div>
-                <div>
-                    <img src="" alt="2">
-                    <p>Project 2</p>
-                </div>
-                <div>
-                    <img src="" alt="3">
-                    <p>Project 3</p>
-                </div>
-                <div>
-                    <img src="" alt="4">
-                    <p>Project 4</p>
-                </div>
-                <div>
-                    <img src="" alt="5">
-                    <p>Project 5</p>
-                </div>
-                <div>
-                    <img src="" alt="6">
-                    <p>Project 6</p>
-                </div>
+                <img src="assets/background.jpg" alt="1">
+                <p>Project 1</p>
             </div>
-        </nav>
-    </nav>
-    <nav class="sixth">
-        <img src="assets/painting-mountain-lake-with-mountain-background.jpg" alt="Front">
-    </nav>
+            <hr color="black">
+            <div>
+                <img src="assets/background.jpg" alt="2">
+                <p>Project 2</p>
+            </div>
+            <hr color="black">
+            <div>
+                <img src="assets/background.jpg" alt="3">
+                <p>Project 3</p>
+            </div>
+            <hr color="black">
+            <div>
+                <img src="assets/background.jpg" alt="4">
+                <p>Project 4</p>
+            </div>
+            <hr color="black">
+            <div>
+                <img src="assets/background.jpg" alt="5">
+                <p>Project 5</p>
+            </div>
+            <hr color="black">
+            <div>
+                <img src="assets/background.jpg" alt="6">
+                <p>Project 6</p>
+
+            </div>
+        </section>
+    </section>
+    <section class="fifth">
+        <a href="assets/resume.pdf">Resume (pdf)</a>
+    </section>
     <script>
         var apos = document.body.scrollTop;
         var body = document.body,
@@ -95,7 +122,7 @@
         var click=0;
         var ids = [];
         var buttons = document.querySelectorAll('button')
-        var pageWidth = Math.floor(document.body.clientHeight)/6
+        var pageWidth = Math.floor(document.body.clientHeight)/5
         console.log(buttons[0].onclick, document.body.clientHeight)
         function scrollWin(target, time, c) {
             var currentPosition = apos
@@ -127,7 +154,7 @@
             
             let posx = pageWidth*pos;
             let diff = posx-apos
-            pageWidth = Math.floor(document.body.clientHeight)/6
+            pageWidth = Math.floor(document.body.clientHeight)/5
             click = click^true
 
             console.log('pos: '+apos,'moving up//down: '+ diff, 'valid click: '+ click)
